@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol,ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav.navbar,ol,ul,div,section,span,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+/* variable common */
+:root{
+    --primary-color: #02918c;
+    --common-color: #7e8287;
+}
+
+/* =========common tag css========= */
+p{
+    color: #7e8287;
+    font-size: 16px;
+    font-weight: 400;
+}
+/*================navbar starts here=====================*/
+.navbar{
+    background-color: var(--primary-color);
+}
+
+#my_navbar ul li a{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 26px 25px;
+}
+#my_navbar ul li a:hover{
+    color: yellow;
+}
+
+.navbar-toggler span{
+    color: white;
+}
+
+/* ---this is js work-- */
+.menufixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(2,145,140,.70);
+    z-index: 5;
+}
+/*=================banner part starts here======================*/
+#banner{
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+#banner::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,.60);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.banner_cnt{
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+    margin-top: 170px;
+}
+
+.banner_cnt h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.banner_cnt h1{
+    font-size: 68px;
+    font-weight: 800px;
+    text-transform: uppercase;
+    letter-spacing: 25px;
+    font-weight: 700;
+    margin: 30px 0px;
+}
+
+.banner_cnt span{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.banner_cnt img{
+     margin: 50px 0px;
+     display: inline-block;
+}
+
+.banner_cnt .btn a{
+      color: #0b1016;
+      font-size: 14px;
+      font-weight: 800;
+      background-color: #cfc91d;
+      padding: 15px 30px;
+    
+}
+
+/* ================ about part statrts here ================== */
+#about{
+
+}
+.head_part{
+    text-align: center;
+    margin-top: 40px;
+}
+.heading{
+   font-weight: 800;
+   font-size: 46px;
+   color: #02918c;
+   text-transform: uppercase;
+}
+
+.head_part p{
+    line-height: 35px;
+    padding: 0px 115px;
+    padding-top: 25px;
+   
+}
+.head_part span{
+    font-size: 23px;
+    font-weight: 800;
+    color: #7e8287;
+}
+
+
+.ab-block h3{
+    font-size: 16px;
+    color: #7e8287;
+    font-weight: 800;
+}
+
+.ab-block{
+    margin-top: 50px;
+    text-align: center;
+    padding: 0px 64px;
+    border-right: 1px solid #d9dbdb;
+    height: 250px;
+    display: inline-block;
+    transition: .5s;
+    -webkit-transition: .5s;
+}
+.ab-block:hover{
+    background-color: #d1f8f8;
+}
+
+.ab-block i{
+    padding-top: 35px;
+    padding-bottom: 25px;
+    color: #04928d;
+    font-size: 35px;
+}
+
+.ab-block p{
+    padding-top: 20px;
+    font-size: 11px;
+    font-weight: 400;
+    color: #7e8287;
+    line-height: 26px;
+}
+
+.ab-block:last-child{
+    border-right: none;
+}
+
+/* ================ services part statrts here ================== */
+#services{
+    margin-top: 50px;
+    background-image: url(../img/banner02.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 730px;
+}
+
+.head_part_02{
+    padding-top: 50px;
+    text-align: left;
+}
+.head_part_02 img{
+    padding: 15px 0px;
+}
+
+.service_items{
+     display: inline-block;
+}
+
+.service_items i{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    color: #04928d;
+    font-size: 35px;
+}
+
+.service_items p{
+    padding-top: 15px;
+    padding-right: 60px;
+    font-size: 11px;
+    font-weight: 400;
+    color: #7e8287;
+    line-height: 26px;
+}
+
+/* =============MY WORK part css starts here=============== */
+#my_work .head_part p{
+    padding: 0px 210px;
+}
+
+.img-items{
+    padding: 0px;
+    position: relative;
+}
+.img-items img{
+    width: 100%;
+    display: block;
+}
+.img-items .overlay{
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 25px;
+    right: 25px;
+    border: 3px solid rgb(90, 76, 76);
+    background: rgba(2,145,140,.84);
+    transform: scale(0);
+    transition: 1s;
+}
+.img-items:hover .overlay{
+    transform:scale(1) ;
+}
+.overlay h3{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 55px;
+}
+.overlay p{
+    font-size: 13px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 38px;
+    padding-left: 38px;
+}
+
+/* =========contact part css starts here====== */
+
+#footer{
+    background-color: #0b0b0bfa;
+    padding: 60px 0px;
+}
+#footer .container .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_one{
+    width: 640px;
+    text-align: center;
+}
+
+.f-text{
+    color: #7e8287;
+    text-align: center;
+    background: transparent;
+    width: 100%;
+    padding: 15px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    border-bottom: 1px solid #898989;
+}
+
+.input_one .email{
+    margin-top: 50px;
+}
+
+.input_msg{
+    width: 920px;
+    margin-top: 45px;
+}
+
+.input_msg textarea{
+    height: 120px;
+    resize: none;
+}
+.input_msg label{
+    color: #7e8287;
+    text-align: center;
+    background: transparent;
+    width: 100%;
+    padding: 15px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    border-bottom: 1px solid #898989;
+}
+.input_msg label{
+    display: block;
+}
+
+.btn02{
+    text-align: center;
+    margin-top: 65px;
+}
+
+.btn02 input{
+    color: #0b1016;
+    font-size: 14px;
+    font-weight: 800;
+    height: 50px;
+    width: 200px;
+    background: #cfc91d;
+    border: none;
+    text-transform: uppercase;
+    transition: .5s;
+    -webkit-transition: .5s;
+}
+
+.btn02 input:hover{
+    background: #fff700;
+}
+  /*footer part css ends*/
+
+#end{
+    width: 100%;
+    background: #000000;
+    text-align: center;
+}
+.end{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#end .end a{
+    color: #cfcfcf;
+    text-align: center;
+    font-size: 12px;
+}
